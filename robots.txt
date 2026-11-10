@@ -1,0 +1,4 @@
+# This project-path file is informational. Crawlers read the host-root /robots.txt.
+User-agent: *
+Allow: /ziyou-youqi/
+Sitemap: https://gaolengyan.github.io/ziyou-youqi/sitemap.xml

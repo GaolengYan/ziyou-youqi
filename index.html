@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#163f35">
+  <meta name="description" content="输入月收入、月支出和当前资产，计入通胀，估算距离财富自由还有多久；输入商品价格，比较购买前后的达标时间。默认参数附原始来源，免费使用，个人输入仅保存在浏览器。">
+  <title>财富自由计算器｜通胀与消费影响测算 - 自由有期</title>
+  <link rel="icon" type="image/svg+xml" href="/ziyou-youqi/favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+<!-- discovery:start -->
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://gaolengyan.github.io/ziyou-youqi/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="自由有期">
+<meta property="og:title" content="财富自由计算器｜通胀与消费影响测算 - 自由有期">
+<meta property="og:description" content="输入月收入、月支出和当前资产，计入通胀，估算距离财富自由还有多久；输入商品价格，比较购买前后的达标时间。默认参数附原始来源，免费使用，个人输入仅保存在浏览器。">
+<meta property="og:url" content="https://gaolengyan.github.io/ziyou-youqi/">
+<meta property="og:image" content="https://gaolengyan.github.io/ziyou-youqi/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="自由有期：财富自由时间与消费影响计算器">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="财富自由计算器｜通胀与消费影响测算 - 自由有期">
+<meta name="twitter:description" content="输入月收入、月支出和当前资产，计入通胀，估算距离财富自由还有多久；输入商品价格，比较购买前后的达标时间。默认参数附原始来源，免费使用，个人输入仅保存在浏览器。">
+<meta name="twitter:image" content="https://gaolengyan.github.io/ziyou-youqi/assets/social-card.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://gaolengyan.github.io/ziyou-youqi/#publisher","name":"自由有期","url":"https://gaolengyan.github.io/ziyou-youqi/"},{"@type":"WebSite","@id":"https://gaolengyan.github.io/ziyou-youqi/#website","name":"自由有期","url":"https://gaolengyan.github.io/ziyou-youqi/","inLanguage":"zh-CN","publisher":{"@id":"https://gaolengyan.github.io/ziyou-youqi/#publisher"}},{"@type":"WebPage","@id":"https://gaolengyan.github.io/ziyou-youqi/","name":"财富自由计算器｜通胀与消费影响测算 - 自由有期","description":"输入月收入、月支出和当前资产，计入通胀，估算距离财富自由还有多久；输入商品价格，比较购买前后的达标时间。默认参数附原始来源，免费使用，个人输入仅保存在浏览器。","url":"https://gaolengyan.github.io/ziyou-youqi/","inLanguage":"zh-CN","isPartOf":{"@id":"https://gaolengyan.github.io/ziyou-youqi/#website"},"mainEntity":{"@id":"https://gaolengyan.github.io/ziyou-youqi/#calculator"},"dateModified":"2026-11-10"},{"@type":"WebApplication","@id":"https://gaolengyan.github.io/ziyou-youqi/#calculator","name":"自由有期财富自由计算器","url":"https://gaolengyan.github.io/ziyou-youqi/","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"zh-CN","isAccessibleForFree":true,"browserRequirements":"交互计算需要启用 JavaScript","description":"自由有期是一款免费的财富自由计算器。输入税后月收入、平均月支出和当前可投资资产，计入通胀与自定收益假设，估算达到资产目标的时间，并比较一次性消费会让目标推迟多久。","featureList":["财富自由时间估算","通胀调整","一次性消费时间影响","默认参数来源","浏览器本机保存"],"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"publisher":{"@id":"https://gaolengyan.github.io/ziyou-youqi/#publisher"}}]}</script>
+<!-- discovery:end -->
+<link rel="stylesheet" href="/ziyou-youqi/content.css">
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v15M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2V4Z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l1 14H4L5 7ZM8 8V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </defs></svg>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="自由有期 首页"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16a11 11 0 1 0 3-8M5 4v7h7M16 9v8l5 3"/></svg></span><span>自由有期<small>THE FREEDOM PROJECT</small></span></a>
+    <nav aria-label="主导航"><a class="nav-active" href="#planner">自由规划</a><a href="#purchase">消费模拟</a><button class="nav-button" data-source="method">计算依据 <span>↗</span></button></nav>
+    <span class="privacy-pill"><svg><use href="#i-shield"/></svg>数据留在你的浏览器</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">LESS GUESSING. MORE LIVING.</p><h1 id="page-title">把金钱，换算成<span>时间。</span></h1><p class="intro-copy">了解距离自由还有多远，也为当下的每一次选择，多一个视角。</p></div><div class="intro-note"><span class="mini-dot"></span> 你的生活，由你定义<br><small>规划未来，也好好享受现在。</small></div></section>
+    <div class="planner-grid" id="planner">
+      <aside class="inputs-panel panel" aria-labelledby="inputs-heading">
+        <div class="section-title"><div><span class="step-label">01 / THE STARTING POINT</span><h2 id="inputs-heading">你的起点</h2></div><button id="demo-button" class="text-button"><svg><use href="#i-spark"/></svg>体验示例</button></div>
+        <div id="mode-notice" class="mode-notice">填写你的真实情况，计算会随输入更新。</div>
+        <form id="planner-form" novalidate autocomplete="off">
+          <div class="field"><div class="field-label"><label for="income">税后月收入</label><button type="button" class="source-button" data-source="personal">来源 ↗</button></div><div class="money-input"><span>¥</span><input id="income" name="income" inputmode="decimal" type="number" min="0" max="1000000000000" step="100" placeholder="每月实际到手收入"><span class="input-unit">/ 月</span></div></div>
+          <div class="field"><div class="field-label"><label for="expense">平均月支出</label><button type="button" class="source-button" data-source="personal">来源 ↗</button></div><div class="money-input"><span>¥</span><input id="expense" name="expense" inputmode="decimal" type="number" min="0.01" max="1000000000000" step="100" placeholder="维持当前生活的开销"><span class="input-unit">/ 月</span></div><p class="field-hint">把保险、旅行等年度开销也平摊进来。</p></div>
+          <div class="field"><div class="field-label"><label for="assets">当前可投资资产</label><button type="button" class="source-button" data-source="personal">来源 ↗</button></div><div class="money-input"><span>¥</span><input id="assets" name="assets" inputmode="decimal" type="number" min="0" max="1000000000000" step="1000" placeholder="存款 + 投资资产"></div><p class="field-hint">填写可用于计划的资金，不含自住房价值。</p></div>
+          <div class="cash-flow"><span>当前每月结余</span><strong id="monthly-surplus">—</strong></div>
+          <details class="advanced" open><summary><span>调整计算假设 <span class="count-badge">4</span></span><span class="chevron">⌄</span></summary><p class="advanced-note">每个默认值都有来处，也都可以修改。</p><div class="rates-grid">
+            <div class="rate-field"><div class="field-label"><label for="inflation">年通胀率</label><button type="button" class="source-button" data-source="inflation" aria-label="年通胀率来源">ⓘ</button></div><div class="rate-input"><input id="inflation" type="number" step="0.01" min="-99" max="100" value="0.66"><span>%</span></div><small id="inflation-tag">历史数据计算值</small></div>
+            <div class="rate-field"><div class="field-label"><label for="withdrawal">年提取比例</label><button type="button" class="source-button" data-source="withdrawal" aria-label="年提取比例来源">ⓘ</button></div><div class="rate-input"><input id="withdrawal" type="number" step="0.1" min="0.1" max="100" value="4"><span>%</span></div><small id="withdrawal-tag">研究参考</small></div>
+            <div class="rate-field"><div class="field-label"><label for="returns">年投资收益率</label><button type="button" class="source-button" data-source="returns" aria-label="年投资收益率来源">ⓘ</button></div><div class="rate-input"><input id="returns" type="number" step="0.1" min="-99" max="100" value="0"><span>%</span></div><small id="returns-tag">基础情景 · 不计收益</small></div>
+            <div class="rate-field"><div class="field-label"><label for="growth">年收入增长率</label><button type="button" class="source-button" data-source="growth" aria-label="年收入增长率来源">ⓘ</button></div><div class="rate-input"><input id="growth" type="number" step="0.1" min="-99" max="100" value="0"><span>%</span></div><small id="growth-tag">基础情景 · 收入不变</small></div>
+          </div><button id="reset-rates" type="button" class="reset-rates">恢复参考设置 ↺</button></details>
+        </form>
+        <div class="local-save"><svg><use href="#i-shield"/></svg><span id="save-status">仅在此浏览器保存</span><button id="clear-button">清除</button></div>
+      </aside>
+      <div class="results-column">
+        <section class="freedom-card" aria-labelledby="result-heading">
+          <div class="hero-top"><span class="hero-label">YOUR TIME TO FREEDOM</span><span class="inflation-badge"><span></span>已计入通胀</span></div>
+          <div class="hero-main"><div class="hero-text"><h2 id="result-heading">距离你的自由生活</h2><div id="countdown" class="countdown" aria-live="polite"><strong>—</strong><span>年</span><strong>—</strong><span>个月</span></div><p id="result-description">从左侧填写三个数字，看看未来的可能。</p></div><div class="progress-orbit"><svg viewBox="0 0 200 200" role="img" aria-label="目标完成进度"><circle class="orbit-outer" cx="100" cy="100" r="94"/><circle class="orbit-inner" cx="100" cy="100" r="65"/><circle class="orbit-track" cx="100" cy="100" r="82"/><circle id="progress-ring" cx="100" cy="100" r="82" stroke-dasharray="515.22" stroke-dashoffset="515.22" transform="rotate(-90 100 100)"/><path class="orbit-star" d="m170 31 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z"/></svg><div class="orbit-text"><strong id="progress-percent">0<span>%</span></strong><span>自由进度</span></div></div></div>
+          <div class="hero-stats"><div><span>目标资产 · 今天的购买力</span><strong id="target-value">¥ —</strong></div><div><span>距离当前目标还差</span><strong id="gap-value">¥ —</strong></div><div><span>当前储蓄率</span><strong id="saving-rate">— %</strong></div></div>
+        </section>
+    <section id="purchase" class="purchase-panel panel" aria-labelledby="purchase-heading"><div class="purchase-intro"><span class="step-label">02 / A LITTLE PERSPECTIVE</span><h2 id="purchase-heading">这一次心动，<br>价值多少自由时间？</h2><p>一部手机，一次旅行，或者一个期待已久的礼物。<br>看见时间成本，再做属于你的选择。</p><span class="purchase-icon"><svg><use href="#i-bag"/></svg></span></div><div class="purchase-calculator"><div class="field-label"><label for="price">这笔一次性消费的价格</label><button class="source-button" data-source="purchase">说明 ↗</button></div><div class="purchase-price-row"><div class="money-input purchase-input"><span>¥</span><input id="price" aria-describedby="price-auto-note" type="number" inputmode="decimal" min="0" max="1000000000000" step="100" placeholder="输入你正在考虑的价格"></div></div><p id="price-auto-note" class="auto-calculate-note">输入后自动计算，结果与曲线实时更新</p><div id="purchase-result" class="purchase-result" aria-live="polite"><span class="purchase-result-label">给选择，多一个视角</span><strong>先完成上方的自由规划</strong><p>这里会告诉你，购买前后的达标时间有何不同。</p></div><p class="purchase-footnote">仅模拟现在支付的额外消费。倒计时按整月显示，延迟可小于 1 个月。</p></div></section>
+      </div>
+    </div>
+        <section class="chart-panel panel" aria-labelledby="chart-heading"><div class="chart-heading"><div><span class="step-label">THE ROAD AHEAD</span><h2 id="chart-heading">看见自由的轨迹</h2></div><div class="view-switch" role="group" aria-label="图表金额显示口径"><button id="view-real" class="selected" aria-pressed="true">今天购买力</button><button id="view-nominal" aria-pressed="false">未来金额</button></div></div><div class="chart-legend"><span><i class="legend-line green"></i>原计划</span><span id="purchase-legend"><i class="legend-line amber"></i>购买后</span><span><i class="legend-line dashed"></i>目标资产</span><span id="chart-unit">单位：万元 · 已扣通胀</span></div><div class="chart-wrap"><svg id="wealth-chart" viewBox="0 0 780 245" role="img" aria-label="填写数据后生成资产与目标曲线"></svg><div id="chart-empty" class="chart-empty"><span class="empty-icon"><svg><use href="#i-clock"/></svg></span><strong>每一步积累，都在靠近自由</strong><span>填写数据，生成你的专属路径</span></div><div id="chart-tooltip" class="chart-tooltip" hidden></div></div><div class="chart-footer"><span id="chart-description">曲线按月模拟，达标时间为估算值。</span><button class="text-button" data-source="method">了解计算方式 ↗</button></div></section>
+    <section class="sources-section" id="sources" aria-labelledby="sources-heading"><div class="sources-heading"><div><span class="step-label">BUILT ON CLARITY</span><h2 id="sources-heading">每一个数字，都有来处。</h2></div><p>了解假设，才能更好地理解结果。</p></div><div class="source-cards"><button class="source-card" data-source="inflation"><span class="source-type">官方历史数据</span><strong>通胀参考</strong><span>国家统计局 · 2021—2025 年 CPI</span><span class="source-card-arrow">↗</span></button><button class="source-card" data-source="withdrawal"><span class="source-type">研究参考</span><strong>4% 提取规则</strong><span>Vanguard · 适用条件与局限</span><span class="source-card-arrow">↗</span></button><button class="source-card" data-source="assumptions"><span class="source-type">产品情景假设</span><strong>默认设置与演示数据</strong><span>区分历史事实、参考值与个人输入</span><span class="source-card-arrow">↗</span></button><button class="source-card" data-source="method"><span class="source-type">透明计算</span><strong>本次计算依据</strong><span>逐月推演 · 通胀与复利口径</span><span class="source-card-arrow">↗</span></button></div></section>
+<!-- explanation:start --><section class="explain-section" aria-labelledby="explain-heading"><p class="step-label">UNDERSTAND YOUR PLAN</p><h2 id="explain-heading">财富自由，需要多少钱？</h2><p>自由有期是一款免费的财富自由计算器。输入税后月收入、平均月支出和当前可投资资产，计入通胀与自定收益假设，估算达到资产目标的时间，并比较一次性消费会让目标推迟多久。</p><p>基本关系是<strong>目标资产 = 同期年度生活支出 ÷ 年提取比例</strong>。例如，今天每月支出 8,000 元、提取比例 4%，对应今天购买力下约 240 万元的目标。通胀会提高未来支出与目标，收入增长和收益假设会改变积累速度。</p><div class="explain-links"><a href="/ziyou-youqi/how-it-works.html"><strong>计算方法与复核示例 ↗</strong><span>逐月公式、购买影响与模型边界</span></a><a href="/ziyou-youqi/data-sources.html"><strong>全部默认值与原始来源 ↗</strong><span>CPI 年度数据、提取比例和情景假设</span></a><a href="/ziyou-youqi/faq.html"><strong>财富自由计算常见问题 ↗</strong><span>从通胀口径到个人数据隐私</span></a></div></section><!-- explanation:end -->
+    <div class="closing-note"><svg><use href="#i-spark"/></svg><p>自由也许是未来的某一天，<span>也可以是今天更从容的一次选择。</span></p></div>
+  </main>
+  <footer><span>自由有期 <span class="footer-divider">/</span> 把生活的选择权，慢慢存回来。</span><span>情景测算，不构成投资建议。 <button data-source="method">了解模型局限 ↗</button></span></footer>
+  <dialog id="source-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow">A NOTE ON THE NUMBERS</span><button id="close-dialog" class="icon-button" aria-label="关闭来源说明"><svg><use href="#i-close"/></svg></button></div><h2 id="dialog-title"></h2><div id="dialog-content"></div><div class="dialog-bottom">参考资料核验于 2026-11-10 · 用户修改不会被自动覆盖</div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p class="noscript">请启用 JavaScript 后使用计算器。计算在你的浏览器中完成。</p></noscript>
+</body>
+</html>
