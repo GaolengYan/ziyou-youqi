@@ -6,4 +6,48 @@
 @media(max-width:850px){.practice-tools{gap:23px;padding:27px}.practice-tools .solid-link{font-size:12px;padding:14px 16px}.goal-targets{padding:24px;gap:17px}.goal-targets strong{font-size:22px}.goal-plan{padding:24px}.goal-plan dd{font-size:21px}}
 @media(max-width:640px){.practice-tools{flex-direction:column;align-items:flex-start;padding:25px;margin:-15px 0 44px;gap:16px}.practice-tools h2{font-size:23px}.goal-fields{display:grid;grid-template-columns:1fr 1fr;column-gap:17px}.goal-basis{padding-bottom:14px}.goal-basis label{font-size:12px}.goal-targets{gap:15px;padding:23px}.goal-targets strong{font-size:22px;overflow-wrap:anywhere}.goal-plan dl>div{gap:15px}.goal-plan dt{font-size:11px}.goal-plan dd{font-size:21px}.review-sheet{font-size:10px!important}.hero-note p{font-size:17px}}
 @media print{.article-main{max-width:none;padding:0}.learning-page .site-header,.learning-page footer,.article-toc,.related-lessons,.article-main>.document-cta,.breadcrumbs{display:none!important}.learning-page{background:white;color:black}.article-heading h1{font-size:25pt}.article-body{max-width:none}.article-body p{font-size:11pt;line-height:1.8;color:#222}.article-body h2{font-size:16pt;break-after:avoid}.article-body section{margin:20px 0}.review-sheet{break-inside:avoid;font-size:10pt!important}.review-sheet td{height:40px}.article-body table{font-size:10pt}.article-summary{background:white;border:1px solid #888}.article-summary p{font-size:13pt}.article-sources a{overflow-wrap:anywhere}}
+.tool-directory{margin:44px 0 55px;scroll-margin-top:25px}
+.tool-directory>div{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #d5dfc7;border-radius:7px;background:#edf2e4;overflow:hidden}
+.tool-directory>div>a{padding:25px 22px;transition:background .2s}
+.tool-directory>div>a+a{border-left:1px solid #d5dfc7}
+.tool-directory>div>a:hover{background:#e2ebd5}
+.tool-directory a>span{font:400 25px var(--serif);color:#7d9565}
+.tool-directory h3{font:500 21px var(--serif);margin:17px 0 12px}
+.tool-directory a>p{font-size:11px;line-height:1.9;color:#627958;margin:0}
+.library-filter{border-block:1px solid #cfd9c2;padding:26px 0 17px;margin-bottom:40px;scroll-margin-top:25px}
+.library-filter h2{margin-bottom:22px}
+.filter-controls{display:grid;grid-template-columns:1.6fr 1fr auto;gap:18px;align-items:end}
+.filter-controls label{display:block;font-size:11px;color:#5d7451;margin-bottom:10px}
+.filter-controls input,.filter-controls select{background:#fff;border:1px solid #c7d5b7;border-radius:5px;min-height:45px;width:100%;padding:12px;color:#2c4e32;font:400 13px var(--sans);box-sizing:border-box}
+.filter-controls button{min-height:45px;background:#eaf0df;border:1px solid #c7d5b7;border-radius:5px;padding:12px 17px;color:#47663b;font:400 12px var(--sans);cursor:pointer}
+#lesson-count{font-size:11px;color:#617653;line-height:1.9;margin:19px 0 0}
+#lesson-empty{font-size:14px;line-height:1.9;color:#607750;padding:24px;background:#edf2e4;border-radius:5px}
+.lesson-card[hidden],.lesson-group[hidden],#lesson-filter[hidden],#lesson-empty[hidden]{display:none!important}
+.sequence-field{margin-top:23px}
+.sequence-field label{display:block;font-size:12px;line-height:1.8;color:#536d49;margin-bottom:10px}
+.sequence-field textarea{width:100%;resize:vertical;border:1px solid #cbd7bd;background:#fafcf6;border-radius:5px;padding:13px;color:#294c33;font:400 18px/1.8 var(--digits);box-sizing:border-box}
+.sequence-field textarea:focus-visible{outline:2px solid #5d7c42;outline-offset:2px}
+.sequence-field p{font-size:10px;line-height:1.9;color:#657958}
+.retirement-results{background:white;border:1px solid #dce3d3;border-radius:9px;overflow:hidden}
+.retirement-context{background:#edf2e4;padding:25px 29px;border-bottom:1px solid #dce3d3}
+.retirement-context>p{font-size:12px;line-height:1.9;color:#607750;margin:14px 0 0}
+.path-results{display:grid;grid-template-columns:1fr 1fr}
+.path-result{padding:25px 28px}
+.path-result+.path-result{border-left:1px solid #e0e6d7}
+.path-result h2{font-size:20px;margin:0 0 20px}
+.path-result>span{display:block;font-size:11px;color:#657b57}
+.path-result>strong{display:block;font:400 clamp(24px,2.8vw,38px)/1.6 var(--digits);margin:9px 0 7px;color:#3e6b3c;overflow-wrap:anywhere}
+.path-result.path-b>strong{color:#966835}
+.path-result>p{font-size:10px;line-height:1.8;color:#6b7f5c;margin:7px 0 18px}
+.path-result b{font-weight:400}
+.path-shortfall{border-top:1px solid #e2e8d8;padding-top:15px;font-size:10px;line-height:1.9;color:#567447}
+.path-shortfall.has-shortfall{color:#9c4d30}
+.retirement-chart{border-top:1px solid #e0e6d7;padding:25px 28px}
+.chart-caption i.reverse-dot{background:#ae7b45;margin-left:6px}
+#retirement-chart{width:100%;height:auto;display:block;margin-top:14px}
+.retirement-results[aria-disabled=true]{opacity:.7}
+footer{flex-wrap:wrap}
+@media(max-width:850px){.tool-directory>div{grid-template-columns:1fr 1fr}.tool-directory>div>a:nth-child(3){border-left:0}.tool-directory>div>a:nth-child(n+3){border-top:1px solid #d5dfc7}.filter-controls{grid-template-columns:1.4fr 1fr}.filter-controls button{grid-column:1/-1;justify-self:start}.path-result{padding:23px}.path-result h2{font-size:19px}.path-result>strong{font-size:27px}.retirement-chart{padding:23px}}
+@media(max-width:640px){.tool-directory{margin:35px 0 40px}.tool-directory>div>a{padding:22px 18px}.tool-directory h3{font-size:20px}.tool-directory a>p{font-size:10px}.library-filter{padding-top:23px;margin-bottom:32px}.filter-controls{grid-template-columns:1fr 1fr;gap:15px}.filter-controls>div:first-child{grid-column:1/-1}.filter-controls button{grid-column:auto;justify-self:stretch}.filter-controls input,.filter-controls select{font-size:13px}.retirement-context{padding:24px}.path-result{padding:23px 20px}.path-result h2{font-size:18px;line-height:1.8;min-height:63px}.path-result>strong{font-size:26px}.path-result>p{font-size:10px;min-height:36px}.path-shortfall{font-size:10px}.retirement-chart{padding:23px 20px}.sequence-field textarea{font-size:17px}.retirement-grid .compound-inputs h2{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.tool-directory>div>a{transition:none}}
 @media(max-width:640px){body:not(.document-page) .site-header{height:auto;min-height:108px;flex-wrap:wrap;padding:15px 18px;gap:14px}body:not(.document-page) .site-header nav{width:100%;justify-content:space-between;gap:12px}body:not(.document-page) .site-header nav a,body:not(.document-page) .site-header nav button{white-space:nowrap;font-size:11px}}
